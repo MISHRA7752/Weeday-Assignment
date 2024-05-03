@@ -1,46 +1,24 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `npm i`
+To install dependency
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `Optimisation used `
+ 1. Infinite Scrolling with Intersection Observer: Using the Intersection Observer API for infinite scrolling instead of listening to the scroll event is a more efficient approach. This method only triggers when a specific element (e.g., a loading element) intersects with the viewport, making it more performant than continuous onScroll event listeners, which can lead to excessive re-renders and CPU usage.
+ 2. UseCallback and React.memo Hooks:
+    useCallback: This hook helps memoize functions to avoid recreating them on every render. This optimization can help reduce unnecessary re-renders in child components that depend on these functions.
+    React.memo: This higher-order component helps prevent unnecessary re-renders of components by only re-rendering them when their props change. This is useful in optimizing components that receive the same props frequently.
+ 3. Key Prop in Map: Adding a key prop to elements within a map function helps React identify which items have changed, allowing it to efficiently update the DOM without re-rendering the entire list. This can significantly improve rendering performance, especially with large lists.
+ 4. Lazy Loading on Images: Lazy loading defers the loading of images until they are about to enter the viewport. This reduces the initial load time and memory usage by only loading images as needed. This is especially useful for pages with many images or images that aren't immediately visible on page load.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
