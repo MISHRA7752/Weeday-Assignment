@@ -19,6 +19,9 @@ You will also see any lint errors in the console.
  3. Key Prop in Map: Adding a key prop to elements within a map function helps React identify which items have changed, allowing it to efficiently update the DOM without re-rendering the entire list. This can significantly improve rendering performance, especially with large lists.
  4. Lazy Loading on Images: Lazy loading defers the loading of images until they are about to enter the viewport. This reduces the initial load time and memory usage by only loading images as needed. This is especially useful for pages with many images or images that aren't immediately visible on page load.
 
+### `Addon`
+ 1. Added Responsiveness to the app
+
 
 
 
