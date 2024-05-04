@@ -21,6 +21,11 @@ You will also see any lint errors in the console.
 
 ### `Addon`
  1. Added Responsiveness to the app
+ 2. Added Typescript to the project
+ 3. No Libraries used for infinite scroll or UI
+
+### `open app Without running locally`
+  https://vercel.com/poojan-mishras-projects/weeday-assignment
 
 
 
